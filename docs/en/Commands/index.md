@@ -39,12 +39,12 @@ At the current version there are only Admin and RCON commands available.
     | `/addadminip <IP>` | Adds a IP address to admin whitelist. | `Chat` `RCON` `Admin` |
     | `/setadmin <UserId>` | Temporarily grants/revokes admin from a player. | `Chat` `RCON` `Admin` |
     | `/adminlogout` | Logs you out of admin mode. | `Chat` `Admin` |
+    | `/adminlogin` | Logs you into admin mode. | `Chat` |
     | `/setguildleader <UserId>` | Makes target player the leader of his current guild. | `Chat` `RCON` `Admin` |
     | `/renameplayer <UserId> <NewName>` | Renames a player's nickname. | `Chat` `RCON` `Admin` |
     | `/pgbroadcast <Message>` | Send a message to all players in the server. | `Chat` `RCON` `Admin` |
     | `/reloadcfg` | Reloads `Config.json`, `whitelist.json` and `banlist.txt`. | `Chat` `RCON` `Admin` |
     | `/getrconcmds` | Returns a list of every command with the required arg count which is usable by RCON. | `RCON` `Admin` |
-
 
 
 ??? note "Admin Exclusive Commands"
@@ -55,8 +55,6 @@ At the current version there are only Admin and RCON commands available.
     | `/jetragon` | Gives you a extremely fast Jetragon named `PalGuardian`. | `Chat` `Admin` |
     | `/catwaifu` | Gives you an Cat-Waifu (Katress) that buffs your character stats. | `Chat` `Admin` |
 
-
-
 ??? note "World Commands"
     | Command | Description | Permissions |
     | ------- | ----------- | ----------- |
@@ -66,14 +64,32 @@ At the current version there are only Admin and RCON commands available.
     | `/killnearestbase [X] [Y] [Z]` | Destroys nearest base (**Use with caution!**). | `Chat` `RCON` `Admin` |
     | `/settime <hour>` | Changes the time in Palworld. Hour can have following values: `0` to `23`, `day` and `night`. | `Chat` `RCON` `Admin` |
     | `/resetoilrig <oilrig>` | Resets the specified OilRigs. Only the rocket tower is unaffected. Argument can have following values: `lv30`, `lv55`, `lv60` and `all`. | `Chat` `RCON` `Admin` |
-
-
+    | `/tp <UserId1> <UserId2>` | Teleports UserId1 to UserId2. | `Chat` `RCON` `Admin` |
+    | `/tp <UserId> <X> <Y> <Z>` | Teleports the player to coordinates. | `Chat` `RCON` `Admin` |
+    | `/tp <UserId> home` | Teleports the player to their closest base. | `Chat` `RCON` `Admin` |
+    | `/tp <UserId> oilrig` | Teleports the player to their closest oilrig. | `Chat` `RCON` `Admin` |
+    | `/tp <UserId>` | Teleports you to the player. | `Chat` `RCON` `Admin` |
 
 ??? note "Item Commands"
-| Command | Description | Permissions |
-| ------- | ----------- | ----------- |
-| `/give <UserId> <ItemId> [Amount=1]` | Gives a player an item and if specified how many. | `Chat` `RCON` `Admin` |
-| `/giveitems <UserId> <ItemId>[:<Amount>] ...` | Gives a player more than 1 item in one command and if specified how many of each seperated by a colon. | `Chat` `RCON` `Admin` |
-| `/giveme <ItemId> [Amount=1]` | Gives yourself an item and if specified how many. |`Chat` `Admin` |
-| `/delitem <UserId> <ItemId> [Amount=1]` | Deletes an item from a player and if specified how many. Default is `1` which will delete only 1 occurence of that item. Use `all` instead of `1` to delete all occurences. | `Chat` `RCON` `Admin` |
-| `/delitems <UserId> <ItemId>[:<Amount>] ...` | Deletes more than 1 item from a player in one command and if specified how many of each seperated by a colon. Use `all` instead of `1` to delete all occurences. | `Chat` `RCON` `Admin` |
+    | Command | Description | Permissions |
+    | ------- | ----------- | ----------- |
+    | `/give <UserId> <ItemId> [Amount=1]` | Gives a player an item and if specified how many. | `Chat` `RCON` `Admin` |
+    | `/giveitems <UserId> <ItemId>[:<Amount>] ...` | Gives a player more than 1 item in one command and if specified how many of each seperated by a colon. | `Chat` `RCON` `Admin` |
+    | `/giveme <ItemId> [Amount=1]` | Gives yourself an item and if specified how many. | `Chat` `Admin` |
+    | `/delitem <UserId> <ItemId> [Amount=1]` | Deletes an item from a player and if specified how many. Default is `1` which will delete only 1 occurence of that item. Use `all` instead of `1` to delete all occurences. | `Chat` `RCON` `Admin` |
+    | `/delitems <UserId> <ItemId>[:<Amount>] ...` | Deletes more than 1 item from a player in one command and if specified how many of each seperated by a colon. Use `all` instead of `1` to delete all occurences. | `Chat` `RCON` `Admin` |
+    | `/givepal <UserId> <PalId> [Level=1]` | Gives a Pal to a player at the specified level. | `Chat` `RCON` `Admin` |
+    | `/givepal_j <UserID> <PalJSON>` | Gives player a Pal defined by a JSON blob. | `Chat` `RCON` `Admin` |
+    | `/givemepal <PalId> [Level=1]` | Gives yourself a Pal at the specified level. | `Chat` `Admin` |
+    | `/givemepal_j <PalJSON>` | Gives yourself a Pal defined by a JSON blob. | `Chat` `Admin` |
+    | `/give_exp <UserId> <Amount>` | Gives experience points to a player. | `Chat` `RCON` `Admin` |
+    | `/giveme_exp <Amount>` | Gives experience points to yourself. | `Chat` `Admin` |
+    | `/summon <PalSummon.json>` | Spawns a Pal using the provided `PalSummon.json` file. | `Chat` `Admin` |
+    | `/clearinv <UserId> [Container=items] ...` | Clears specified containers from a player's inventory. Available containers: `items`, `keyitems`, `armor`, `weapons`, `food`, `dropslot`, or `all`. | `Chat` `RCON` `Admin` |
+
+??? note "Technology Commands"
+    | Command | Description | Permissions |
+    | ------- | ----------- | ----------- |
+    | `/learntech <UserId> <TechID>` | Lets a player learn a specific technology. Use `all` to unlock everything. | `Chat` `RCON` `Admin` |
+    | `/unlearntech <UserId> <TechID>` | Makes a player forget a specific technology. Use `all` to remove everything. | `Chat` `RCON` `Admin` |
+    | `/gettechids` | Returns a list of all available technology IDs. RCON gets JSON output. | `Chat` `RCON` `Admin` |
