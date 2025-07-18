@@ -1,0 +1,165 @@
+:root
+{
+    --var-font: 'Roboto Mono', monospace;
+    --box-padding: 0px 6px;
+    --box-display: inline-block; 
+
+    --file-color: rgb(255, 234, 113);
+    --path-color: var(--md-code-hl-string-color);
+    --rounding: 4px;
+}
+
+[data-md-color-scheme="default"] 
+{
+    --md-code-bg-color: #e5e5e5;
+}
+
+[data-md-color-scheme="slate"] 
+{
+    --md-code-bg-color: #363946;
+}
+
+/* variables / values / config etc */
+.config-value
+{ 
+    color:rgb(63, 110, 198);
+    font-family: var(--var-font);
+    background-color: var(--md-code-bg-color);
+    padding: var(--box-padding);
+    display: var(--box-display);
+    border-radius: var(--rounding);
+}
+
+.var-bool
+{
+    color:rgb(255, 95, 74);
+    font-family: var(--var-font);
+    background-color: var(--md-code-bg-color);
+    padding: var(--box-padding);
+    display: var(--box-display);
+}
+
+.var-number
+{
+    color:rgb(15, 159, 255);
+    font-family: var(--var-font);
+    background-color: var(--md-code-bg-color);
+    padding: var(--box-padding);
+    display: var(--box-display);
+}
+
+.var-float
+{
+    color:rgb(78, 214, 255);
+    font-family: var(--var-font);
+    background-color: var(--md-code-bg-color);
+    padding: var(--box-padding);
+    display: var(--box-display);
+}
+
+.var-string
+{
+    color:var(--md-code-hl-string-color);
+    font-family: var(--var-font);
+    background-color: var(--md-code-bg-color);
+    padding: var(--box-padding);
+    display: var(--box-display);
+}
+
+.var-filter
+{
+    color:rgb(224, 173, 96);
+    font-family: var(--var-font);
+    background-color: var(--md-code-bg-color);
+    padding: var(--box-padding);
+    display: var(--box-display);
+}
+
+.var-command
+{
+    color:rgb(169, 79, 204);
+    font-family: var(--var-font);
+    background-color: var(--md-code-bg-color);
+    padding: var(--box-padding);
+    padding-left: 0px;
+    padding-right: 0px;
+    display: var(--box-display);
+}
+
+.var-command-arg
+{
+    color:rgb(224, 173, 96);
+    font-family: var(--var-font);
+    background-color: var(--md-code-bg-color);
+    padding: var(--box-padding);
+    padding-left: 0px;
+    padding-right: 0px;
+    display: var(--box-display);
+}
+
+.var-command-optional
+{
+    color:rgb(160, 147, 127);
+    font-family: var(--var-font);
+    background-color: var(--md-code-bg-color);
+    padding: var(--box-padding);
+    padding-left: 0px;
+    padding-right: 0px;
+    display: var(--box-display);
+}
+
+.arg-string
+{
+    color:var(--md-code-hl-string-color);
+    font-family: var(--var-font);
+    background-color: var(--md-code-bg-color);
+    padding: var(--box-padding);
+    padding-left: 0px;
+    padding-right: 0px;
+    display: var(--box-display);
+}
+
+.path
+{
+    color:var(--path-color);
+    font-family: var(--var-font);
+    text-decoration: underline;
+    text-underline-offset: 6px;
+    background-color: var(--md-code-bg-color);
+    padding: var(--box-padding);
+    display: var(--box-display);
+}
+
+.file
+{
+    color: var(--file-color);
+    font-family: var(--var-font);
+    background-color: var(--md-code-bg-color);
+    padding: var(--box-padding);
+    display: var(--box-display);
+}
+
+.path-partial
+{
+    color:var(--path-color);
+    font-family: var(--var-font);
+    text-decoration: underline;
+    text-underline-offset: 6px;
+    background-color: var(--md-code-bg-color);
+    padding: var(--box-padding);
+    padding-right: 0px;
+    display: var(--box-display);
+}
+
+.file-partial
+{
+    color: var(--file-color);
+    font-family: var(--var-font);
+    font-weight: bold;
+    text-decoration: underline;
+    text-underline-offset: 6px;
+    background-color: var(--md-code-bg-color);
+    padding: var(--box-padding);
+    padding-left: 0px;
+    display: var(--box-display);
+}
